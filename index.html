@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Clarity Method™ Certification | Dr. Erica Rozmid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #FAF7F2;
+      --warm-white: #FFFDF9;
+      --clay:     #C4A882;
+      --clay-dark:#A8895F;
+      --sage:     #8FA68A;
+      --charcoal: #2C2C2C;
+      --mid:      #5A5A5A;
+      --light:    #9A9A9A;
+      --border:   #E8E0D4;
+      --section-gap: 96px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--warm-white);
+      color: var(--charcoal);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    /* ─── UTILITY ─────────────────────────────────── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
+    .container--wide { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+    .text-center { text-align: center; }
+    .clay { color: var(--clay-dark); }
+    .italic { font-style: italic; }
+    .small-caps {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--clay-dark);
+    }
+    section { padding: var(--section-gap) 0; }
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ─── NAV ─────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,253,249,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: var(--charcoal);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    .nav-cta {
+      background: var(--charcoal);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 24px;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--clay-dark); }
+
+    /* ─── HERO ────────────────────────────────────── */
+    #hero {
+      background: var(--cream);
+      padding: 100px 0 80px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    #hero .eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--clay-dark);
+      margin-bottom: 28px;
+    }
+    #hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 300;
+      color: var(--charcoal);
+      max-width: 780px;
+      margin: 0 auto 28px;
+      line-height: 1.15;
+    }
+    #hero h1 em {
+      font-style: italic;
+      color: var(--clay-dark);
+    }
+    #hero .subhead {
+      font-size: clamp(17px, 2vw, 20px);
+      color: var(--mid);
+      max-width: 600px;
+      margin: 0 auto 48px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--charcoal);
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 48px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--clay-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block;
+      border: 1px solid var(--charcoal);
+      color: var(--charcoal);
+      text-decoration: none;
+      padding: 18px 48px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-left: 16px;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: var(--charcoal); color: #fff; }
+    #hero .note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--light);
+      letter-spacing: 0.3px;
+    }
+
+    /* ─── CREDBAR ─────────────────────────────────── */
+    #credbar {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.75);
+      padding: 20px 32px;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 0.8px;
+    }
+    #credbar strong { color: #fff; }
+
+    /* ─── PROBLEM ─────────────────────────────────── */
+    #problem { background: var(--warm-white); }
+    #problem h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+    #problem .lead {
+      font-size: 19px;
+      color: var(--mid);
+      margin-bottom: 32px;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.5;
+    }
+    #problem p { color: var(--mid); margin-bottom: 20px; font-size: 17px; }
+    #problem .callout {
+      border-left: 3px solid var(--clay);
+      padding: 24px 32px;
+      margin: 40px 0;
+      background: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.5;
+    }
+
+    /* ─── SOLUTION ────────────────────────────────── */
+    #solution {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    #solution h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      margin-bottom: 16px;
+      font-weight: 300;
+    }
+    #solution .tagline {
+      font-size: 20px;
+      color: var(--clay-dark);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      margin-bottom: 32px;
+    }
+    #solution p { color: var(--mid); font-size: 17px; margin-bottom: 20px; }
+
+    /* ─── FOR YOU ─────────────────────────────────── */
+    #for-you { background: var(--warm-white); }
+    #for-you .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 48px;
+    }
+    @media(max-width: 680px) { #for-you .two-col { grid-template-columns: 1fr; } }
+    .check-list h3 {
+      font-size: 22px;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+    .check-list ul { list-style: none; }
+    .check-list ul li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 16px;
+      color: var(--mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .check-list ul li:last-child { border-bottom: none; }
+    .check-list ul li .icon { flex-shrink: 0; font-size: 16px; }
+    .check-list.yes .icon { color: var(--sage); }
+    .check-list.no .icon { color: #C4756A; }
+
+    /* ─── ABOUT ───────────────────────────────────── */
+    #about {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.9);
+    }
+    #about .container { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; }
+    @media(max-width: 720px) { #about .container { grid-template-columns: 1fr; } }
+    #about .photo-block img {
+      width: 100%;
+      display: block;
+      filter: grayscale(20%);
+    }
+    #about .photo-block .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    #about h2 {
+      font-size: clamp(28px, 3.5vw, 42px);
+      color: #fff;
+      margin-bottom: 8px;
+      font-weight: 300;
+    }
+    #about .title-line {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 32px;
+    }
+    #about p { color: rgba(255,255,255,0.75); margin-bottom: 18px; font-size: 16px; line-height: 1.75; }
+    #about .credentials {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #about .credentials span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.5px;
+    }
+    #about .credentials span::before { content: "— "; color: var(--clay); }
+
+    /* ─── CURRICULUM ──────────────────────────────── */
+    #curriculum { background: var(--cream); }
+    #curriculum h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      text-align: center;
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+    #curriculum .subtitle {
+      text-align: center;
+      color: var(--mid);
+      font-size: 17px;
+      margin-bottom: 64px;
+    }
+    .phase-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--clay-dark);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .week-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 48px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    @media(max-width: 640px) { .week-grid { grid-template-columns: 1fr; } }
+    .week-item {
+      background: var(--warm-white);
+      padding: 24px 28px;
+      transition: background 0.15s;
+    }
+    .week-item:hover { background: var(--cream); }
+    .week-num {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 8px;
+    }
+    .week-item h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .week-item p { font-size: 14px; color: var(--mid); line-height: 1.6; }
+
+    /* ─── INCLUDES ────────────────────────────────── */
+    #includes { background: var(--warm-white); }
+    #includes h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      text-align: center;
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+    #includes .subtitle {
+      text-align: center;
+      color: var(--mid);
+      margin-bottom: 56px;
+      font-size: 17px;
+    }
+    .includes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media(max-width: 720px) { .includes-grid { grid-template-columns: 1fr; } }
+    .include-card {
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+      background: var(--cream);
+      transition: border-color 0.2s;
+    }
+    .include-card:hover { border-color: var(--clay); }
+    .include-card .icon { font-size: 28px; margin-bottom: 16px; }
+    .include-card h4 { font-size: 18px; margin-bottom: 8px; font-weight: 500; }
+    .include-card p { font-size: 14px; color: var(--mid); line-height: 1.6; }
+    .include-card .value {
+      margin-top: 16px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: var(--clay-dark);
+      text-transform: uppercase;
+    }
+
+    /* ─── PRICING ─────────────────────────────────── */
+    #pricing {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+    #pricing h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      text-align: center;
+      margin-bottom: 56px;
+      font-weight: 300;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 760px;
+      margin: 0 auto 48px;
+    }
+    @media(max-width: 600px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .price-card {
+      border: 1px solid var(--border);
+      padding: 40px 36px;
+      background: var(--warm-white);
+      position: relative;
+    }
+    .price-card.featured {
+      border-color: var(--charcoal);
+      background: var(--charcoal);
+      color: #fff;
+    }
+    .price-card .badge {
+      position: absolute;
+      top: -1px; right: 28px;
+      background: var(--clay-dark);
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+    }
+    .price-card .tier {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 16px;
+    }
+    .price-card.featured .tier { color: var(--clay); }
+    .price-card .amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .price-card .amount sup { font-size: 24px; vertical-align: super; }
+    .price-card .payment-note {
+      font-size: 13px;
+      color: var(--light);
+      margin-bottom: 28px;
+    }
+    .price-card.featured .payment-note { color: rgba(255,255,255,0.5); }
+    .price-card ul { list-style: none; margin-bottom: 32px; }
+    .price-card ul li {
+      font-size: 14px;
+      color: var(--mid);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .price-card ul li:last-child { border-bottom: none; }
+    .price-card.featured ul li { color: rgba(255,255,255,0.75); border-bottom-color: rgba(255,255,255,0.1); }
+    .price-card ul li::before { content: "✓"; color: var(--sage); flex-shrink: 0; }
+    .btn-price {
+      display: block;
+      text-align: center;
+      padding: 16px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-price-dark {
+      background: var(--charcoal);
+      color: #fff;
+    }
+    .btn-price-dark:hover { background: var(--clay-dark); }
+    .btn-price-light {
+      background: #fff;
+      color: var(--charcoal);
+    }
+    .btn-price-light:hover { background: var(--clay-dark); color: #fff; }
+    .pricing-note {
+      text-align: center;
+      font-size: 14px;
+      color: var(--light);
+      margin-top: 8px;
+    }
+    .pricing-note a { color: var(--clay-dark); text-decoration: none; }
+
+    /* ─── TESTIMONIALS ────────────────────────────── */
+    #testimonials { background: var(--warm-white); }
+    #testimonials h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      text-align: center;
+      margin-bottom: 56px;
+      font-weight: 300;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media(max-width: 720px) { .testimonial-grid { grid-template-columns: 1fr; } }
+    .testimonial-card {
+      border: 1px solid var(--border);
+      padding: 36px 32px;
+      background: var(--cream);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: "\201C";
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px;
+      color: var(--clay);
+      opacity: 0.3;
+      position: absolute;
+      top: 12px; left: 20px;
+      line-height: 1;
+    }
+    .testimonial-card blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-card cite {
+      font-size: 13px;
+      color: var(--light);
+      font-style: normal;
+      letter-spacing: 0.5px;
+    }
+
+    /* ─── APPLICATION ─────────────────────────────── */
+    #application {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+    #application h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      text-align: center;
+      margin-bottom: 16px;
+      font-weight: 300;
+    }
+    #application .subtitle {
+      text-align: center;
+      color: var(--mid);
+      margin-bottom: 56px;
+      font-size: 17px;
+      max-width: 520px;
+      margin-left: auto; margin-right: auto;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+    @media(max-width: 720px) { .steps { grid-template-columns: 1fr 1fr; } }
+    @media(max-width: 440px) { .steps { grid-template-columns: 1fr; } }
+    .step {
+      text-align: center;
+      padding: 32px 20px;
+      border: 1px solid var(--border);
+      background: var(--warm-white);
+    }
+    .step .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      color: var(--clay);
+      opacity: 0.5;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .step h4 { font-size: 16px; margin-bottom: 8px; font-weight: 500; }
+    .step p { font-size: 13px; color: var(--mid); }
+    #application .cta-center { text-align: center; }
+
+    /* ─── FAQ ─────────────────────────────────────── */
+    #faq { background: var(--warm-white); }
+    #faq h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      text-align: center;
+      margin-bottom: 56px;
+      font-weight: 300;
+    }
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      user-select: none;
+    }
+    .faq-q .arrow {
+      font-size: 18px;
+      color: var(--clay);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+    }
+    .faq-item.open .faq-a { max-height: 400px; padding-top: 16px; }
+    .faq-a p { font-size: 16px; color: var(--mid); line-height: 1.7; }
+
+    /* ─── INNER CIRCLE ────────────────────────────── */
+    #inner-circle {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.85);
+    }
+    #inner-circle .container { text-align: center; }
+    #inner-circle h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      color: #fff;
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+    #inner-circle .tagline {
+      color: var(--clay);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 20px;
+      margin-bottom: 48px;
+    }
+    .circle-perks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      max-width: 680px;
+      margin: 0 auto 48px;
+      text-align: left;
+    }
+    @media(max-width: 560px) { .circle-perks { grid-template-columns: 1fr; } }
+    .circle-perk {
+      padding: 28px 28px;
+      background: rgba(0,0,0,0.2);
+    }
+    .circle-perk h4 { color: #fff; font-size: 17px; margin-bottom: 6px; font-weight: 500; }
+    .circle-perk p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    #inner-circle .price-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    #inner-circle .price-sub { font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 32px; }
+    .btn-circle {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 44px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    .btn-circle:hover { background: var(--clay-dark); border-color: var(--clay-dark); }
+
+    /* ─── FINAL CTA ───────────────────────────────── */
+    #final-cta {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      padding: 120px 0;
+      text-align: center;
+    }
+    #final-cta h2 {
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    #final-cta p {
+      font-size: 18px;
+      color: var(--mid);
+      max-width: 500px;
+      margin: 0 auto 48px;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    #final-cta .deadline {
+      margin-top: 24px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: var(--clay-dark);
+      text-transform: uppercase;
+    }
+
+    /* ─── FOOTER ──────────────────────────────────── */
+    footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 40px 32px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: var(--clay); }
+    footer .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Clarity CBT</a>
+  <a href="#application" class="nav-cta">Apply Now</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <p class="eyebrow">Introducing The Clarity Method™ Certification</p>
+    <h1>Treat the Child.<br><em>Master the Parent.</em><br>Change Everything.</h1>
+    <p class="subhead">The only certification that teaches you to do both — with the rigor of evidence-based treatment and the artistry of a clinician who has spent 15 years doing this work.</p>
+    <a href="#application" class="btn-primary">Apply for Cohort [#]</a>
+    <a href="#curriculum" class="btn-secondary">See the Curriculum</a>
+    <p class="note">Applications reviewed on a rolling basis &nbsp;·&nbsp; Cohorts capped at 20 clinicians &nbsp;·&nbsp; 2–3 cohorts per year</p>
+  </div>
+</section>
+
+<!-- CRED BAR -->
+<div id="credbar">
+  <strong>Dr. Erica Rozmid, PhD, ABPP</strong> &nbsp;·&nbsp; Board Certified in Behavioral & Cognitive Psychology &nbsp;·&nbsp; Founder, Clarity CBT &nbsp;·&nbsp; Clinical Supervisor & Assistant Professor, UCLA
+</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <p class="small-caps">The Gap Nobody Talks About</p>
+    <h2>Your training prepared you for the child in the room.<br>Nobody prepared you for the parent in the waiting room.</h2>
+    <p class="lead">"You know your interventions. You know the research. You've read the manuals. But then a parent sends a 9-paragraph email at 10pm questioning your entire treatment plan."</p>
+    <p>Or they cancel three sessions in a row because they "just don't see the progress." Or they tell you their child is fine — right when you're finally ready to start the exposure hierarchy.</p>
+    <p>Suddenly, all that clinical training feels irrelevant.</p>
+    <div class="callout">
+      In child and family therapy, the parent <em>is</em> the intervention. They implement the homework. They regulate the home environment. They decide whether their child stays in treatment — or doesn't. And they're the ones writing the check.
+    </div>
+    <p>If you can't bring a parent fully into the therapeutic process — if you can't earn their trust, manage their anxiety, and make them an ally instead of an obstacle — your clinical skills alone won't be enough.</p>
+    <p>This isn't a failure of technique. It's a gap in training. And it's one that most graduate programs never fill.</p>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="container">
+    <p class="small-caps">The Solution</p>
+    <h2>Introducing: The Clarity Method™ Certification</h2>
+    <p class="tagline">Where evidence meets artistry.</p>
+    <p>The Clarity Method™ is not a CBT course. It's not a DBT course. It's what happens when a board-certified child psychologist stops following manuals rigidly — and starts integrating them intelligently.</p>
+    <p>It's the clinical approach Dr. Rozmid developed over 15+ years of supervising trainees, running a thriving group practice at Clarity CBT, and working with the most complex family cases. It's what she teaches at UCLA. And now, for the first time, she's certifying clinicians in it.</p>
+    <p>This is a 12-week live cohort experience for licensed and pre-licensed clinicians who want to become the go-to specialist for children, adolescents, and the families who need them most. It is applied, intimate, and rigorous. And graduates earn the <strong>CMC credential</strong> — Clarity Method Clinician™ — that they can add to their professional bio and use to market their specialty.</p>
+  </div>
+</section>
+
+<!-- FOR YOU / NOT FOR YOU -->
+<section id="for-you">
+  <div class="container">
+    <p class="small-caps text-center">Is This Right For You?</p>
+    <div class="two-col">
+      <div class="check-list yes">
+        <h3>This is for you if...</h3>
+        <ul>
+          <li><span class="icon">✓</span> You work with children, teens, or families — or want to specialize there</li>
+          <li><span class="icon">✓</span> You're trained in CBT or DBT but feel constrained by rigid manualized approaches</li>
+          <li><span class="icon">✓</span> You've struggled to engage, retain, or genuinely collaborate with parents</li>
+          <li><span class="icon">✓</span> You want a specialty credential that justifies premium fees</li>
+          <li><span class="icon">✓</span> You're tired of generic CEUs with no Monday-morning impact</li>
+          <li><span class="icon">✓</span> You want to learn from someone actively doing this work</li>
+          <li><span class="icon">✓</span> You want to be part of a high-caliber, close-knit cohort</li>
+        </ul>
+      </div>
+      <div class="check-list no">
+        <h3>This is not for you if...</h3>
+        <ul>
+          <li><span class="icon">✗</span> You want a passive course you watch on the couch</li>
+          <li><span class="icon">✗</span> You want a certificate to hang on the wall — the CMC is earned, not purchased</li>
+          <li><span class="icon">✗</span> You have no current or intended work with children or families</li>
+          <li><span class="icon">✗</span> You're not ready to do live case consultation and be challenged</li>
+          <li><span class="icon">✗</span> You're looking for CEU credits, not clinical transformation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="photo-block">
+      <!-- Replace with: <img src="YOUR-PHOTO.jpg" alt="Dr. Erica Rozmid" /> -->
+      <div class="photo-placeholder">[Your Photo]</div>
+    </div>
+    <div class="about-text">
+      <p class="small-caps" style="color:var(--clay)">Your Instructor</p>
+      <h2>Dr. Erica Rozmid</h2>
+      <p class="title-line">PhD · ABPP · Founder, Clarity CBT · UCLA</p>
+      <p>I've spent my career doing what most clinicians find hardest: getting results with complex kids <em>and</em> keeping their parents as partners in treatment.</p>
+      <p>I've supervised hundreds of trainees. I know exactly where they get stuck. And it's almost never the child. It's the mom who catastrophizes every regression. The dad who undermines the behavior plan at home. The parents who love their child so much that their own anxiety becomes the biggest clinical variable in the room.</p>
+      <p>I built the Clarity Method because I kept watching talented clinicians struggle with these dynamics — not because they lacked intelligence or compassion, but because no one had ever taught them a systematic approach to family work.</p>
+      <p>I've already certified clinicians through my TFMR Psychologist program. I've watched what happens when therapists get the right training from someone actually in the trenches. Their confidence changes. Their practices grow. Their cases get better outcomes.</p>
+      <p>The Clarity Method Certification is the program I wish existed when I was a trainee.</p>
+      <div class="credentials">
+        <span>PhD, Clinical Psychology</span>
+        <span>ABPP — Board Certified in Behavioral & Cognitive Psychology</span>
+        <span>Founder & Director, Clarity CBT</span>
+        <span>Clinical Supervisor, UCLA</span>
+        <span>Clinical Assistant Professor, UCLA</span>
+        <span>Specialties: CBT, DBT, Child & Family, Parent Work</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+  <div class="container--wide">
+    <p class="small-caps text-center">The Curriculum</p>
+    <h2>12 Weeks. 20 Clinicians. One Transformative Cohort.</h2>
+    <p class="subtitle">Live 90-minute sessions each week. Real case consultation. Clinical skills you'll use on Monday morning.</p>
+
+    <p class="phase-label">Phase 1 — Foundation (Weeks 1–3)</p>
+    <div class="week-grid">
+      <div class="week-item">
+        <p class="week-num">Week 01</p>
+        <h4>The Clarity Framework</h4>
+        <p>Why integrating EBPs is more effective than following one manual — and how to do it with clinical rigor. Your philosophy, your style, your method.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 02</p>
+        <h4>Assessment That Drives Treatment</h4>
+        <p>Functional assessment for children and families. Collaborative goal-setting with parents. What standardized tools miss — and what to do about it.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 03</p>
+        <h4>The Parent Alliance Problem</h4>
+        <p>The #1 reason child therapy fails. The paying-client dynamic, parent transference, and why the most clinically skilled trainees often lose parents fastest.</p>
+      </div>
+      <div class="week-item" style="background:var(--cream);">
+        <p class="week-num" style="opacity:0.4">—</p>
+        <h4 style="opacity:0.3; font-style:italic;">Phase 1 Complete</h4>
+        <p style="opacity:0.4;">Foundation established. Moving into clinical integration.</p>
+      </div>
+    </div>
+
+    <p class="phase-label">Phase 2 — Clinical Integration (Weeks 4–8)</p>
+    <div class="week-grid">
+      <div class="week-item">
+        <p class="week-num">Week 04</p>
+        <h4>Mastering the Parent Session</h4>
+        <p>Psychoeducation that actually lands. Scripts for handling resistance. How to get parents to implement what you're teaching — consistently.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 05</p>
+        <h4>CBT Precision Across Development</h4>
+        <p>Cognitive interventions adapted for ages 5–18. Making the work playful without losing fidelity. The cognitive model explained in ways kids actually understand.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 06</p>
+        <h4>DBT Skills for Youth</h4>
+        <p>When DBT is the better fit. Distress tolerance and emotion regulation adapted for younger clients. Teaching skills to kids <em>and</em> parents simultaneously.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 07</p>
+        <h4>The Integration Decision</h4>
+        <p>How to decide — in the room — which approach to use and when to blend. Live case consultation. You will leave this week thinking differently.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 08</p>
+        <h4>Behavioral Interventions That Stick</h4>
+        <p>Behavior plans, exposure hierarchies, contingency management — translated into parent-friendly language. How to close the gap between what you recommend and what families actually do.</p>
+      </div>
+      <div class="week-item" style="background:var(--cream);">
+        <p class="week-num" style="opacity:0.4">—</p>
+        <h4 style="opacity:0.3; font-style:italic;">Phase 2 Complete</h4>
+        <p style="opacity:0.4;">Integration mastered. Moving into advanced application.</p>
+      </div>
+    </div>
+
+    <p class="phase-label">Phase 3 — Advanced Application (Weeks 9–12)</p>
+    <div class="week-grid">
+      <div class="week-item">
+        <p class="week-num">Week 09</p>
+        <h4>The Hard Cases</h4>
+        <p>Anxiety, OCD, trauma, defiance — the presentations that stump most clinicians. Dr. Rozmid's approach to each. What the manuals skip. Real cases, real complexity.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 10</p>
+        <h4>Building a Specialty Practice</h4>
+        <p>How the CMC credential positions you for referrals and higher fees. How to talk about your specialty in a way that families immediately understand and value.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 11</p>
+        <h4>Ethics & Family Systems</h4>
+        <p>Confidentiality with minors. HIPAA across family members. Navigating split families, custody disputes, and complex family dynamics. Documentation that protects your decisions.</p>
+      </div>
+      <div class="week-item">
+        <p class="week-num">Week 12</p>
+        <h4>Capstone + Certification</h4>
+        <p>You present a case. You receive live feedback from Dr. Rozmid and your cohort. You earn your CMC credential. You leave as a Clarity Method Clinician™.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section id="includes">
+  <div class="container--wide">
+    <p class="small-caps text-center">What's Included</p>
+    <h2>Everything in the Clarity Method™ Certification</h2>
+    <p class="subtitle">Total value: $8,888+ &nbsp;·&nbsp; Your investment: $5,500</p>
+    <div class="includes-grid">
+      <div class="include-card">
+        <div class="icon">🎓</div>
+        <h4>12 Live Cohort Sessions</h4>
+        <p>90-minute weekly sessions with Dr. Rozmid. Small group. Real clinical conversation. Not pre-recorded lectures.</p>
+        <p class="value">Value: $5,500</p>
+      </div>
+      <div class="include-card">
+        <div class="icon">📚</div>
+        <h4>Full Clarity Method Curriculum</h4>
+        <p>The clinical decision trees, frameworks, and integration guides Dr. Rozmid uses in her own practice.</p>
+        <p class="value">Value: $997</p>
+      </div>
+      <div class="include-card">
+        <div class="icon">🗂️</div>
+        <h4>Done-For-You Clinical Resources</h4>
+        <p>Parent handouts, session scripts, assessment guides, behavior plan templates — all adapted for the Clarity Method.</p>
+        <p class="value">Value: $797</p>
+      </div>
+      <div class="include-card">
+        <div class="icon">🏅</div>
+        <h4>CMC Credential</h4>
+        <p>Awarded upon capstone completion. Add "CMC" to your bio, website, and Psychology Today profile. It means something because you earned it.</p>
+        <p class="value">Value: Priceless</p>
+      </div>
+      <div class="include-card">
+        <div class="icon">🌐</div>
+        <h4>Certified Clinician Directory</h4>
+        <p>Families searching for specialists will find you. Referrals come to you without extra marketing effort.</p>
+        <p class="value">Value: $997</p>
+      </div>
+      <div class="include-card">
+        <div class="icon">👥</div>
+        <h4>Private Clarity Community</h4>
+        <p>Peer consultation, case questions, and Dr. Rozmid dropping in weekly. Your cohort becomes your clinical home base.</p>
+        <p class="value">Value: $597</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <p class="small-caps text-center">Investment</p>
+    <h2>Choose Your Path</h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <p class="tier">Core Certification</p>
+        <div class="amount"><sup>$</sup>5,500</div>
+        <p class="payment-note">or 3 payments of $1,850</p>
+        <ul>
+          <li>12 live weekly sessions</li>
+          <li>Full Clarity Method curriculum</li>
+          <li>Done-for-you clinical resources</li>
+          <li>CMC credential upon graduation</li>
+          <li>Certified clinician directory listing</li>
+          <li>Private community access</li>
+        </ul>
+        <a href="#application" class="btn-price btn-price-dark">Apply Now</a>
+      </div>
+      <div class="price-card featured">
+        <div class="badge">Best Value</div>
+        <p class="tier">Core + Inner Circle™</p>
+        <div class="amount"><sup>$</sup>7,500</div>
+        <p class="payment-note">or 4 payments of $1,875 &nbsp;·&nbsp; Save $500</p>
+        <ul>
+          <li>Everything in Core Certification</li>
+          <li>6 months of Inner Circle coaching</li>
+          <li>Monthly live group coaching with Dr. Rozmid</li>
+          <li>Quarterly Hot Seat case consultations</li>
+          <li>Expanding resource vault access</li>
+          <li>Private 1:1 strategy call with Dr. Rozmid*</li>
+        </ul>
+        <a href="#application" class="btn-price btn-price-light">Apply Now</a>
+      </div>
+    </div>
+    <p class="pricing-note">*1:1 strategy session included with pay-in-full option only. &nbsp;<a href="#faq">Common questions →</a></p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container--wide">
+    <p class="small-caps text-center">What Clinicians Are Saying</p>
+    <h2>From Clinicians Who've Trained with Dr. Rozmid</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <blockquote>Before this training, I dreaded the parent session. Now it's where I feel most effective. The framework completely changed how I conceptualize family work.</blockquote>
+        <cite>— Licensed Psychologist, Private Practice</cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>I've done a lot of trainings. This is the first one where I actually practiced differently by Monday. Dr. Rozmid doesn't just teach — she transforms how you think clinically.</blockquote>
+        <cite>— LCSW, Group Practice</cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>I raised my fees immediately after getting certified. The specialty positioning alone has more than paid for the program in new referrals.</blockquote>
+        <cite>— Licensed Therapist, Private Practice</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INNER CIRCLE -->
+<section id="inner-circle">
+  <div class="container">
+    <p class="small-caps" style="color:var(--clay)">For Graduates</p>
+    <h2>The Clarity Inner Circle™</h2>
+    <p class="tagline">Stay connected. Keep growing. Stay in the room with Dr. Rozmid.</p>
+    <div class="circle-perks">
+      <div class="circle-perk">
+        <h4>Monthly Live Coaching</h4>
+        <p>90-minute group coaching calls with Dr. Rozmid. Max 20 members. Real cases, real guidance.</p>
+      </div>
+      <div class="circle-perk">
+        <h4>Quarterly Hot Seats</h4>
+        <p>One clinician presents a case. The whole group consults. Some of the best learning happens here.</p>
+      </div>
+      <div class="circle-perk">
+        <h4>Expanding Resource Vault</h4>
+        <p>New handouts, tools, and clinical templates added monthly. Always growing.</p>
+      </div>
+      <div class="circle-perk">
+        <h4>Permanent Community Access</h4>
+        <p>Connect across cohorts. Peer consult. Dr. Rozmid drops in weekly. Your professional home base.</p>
+      </div>
+    </div>
+    <p class="price-line">Add 6 months of Inner Circle: $2,500 &nbsp;·&nbsp; Bundle with Core: $7,500</p>
+    <p class="price-sub">Already a CMC graduate? Rejoin Inner Circle for $1,500 per 6-month cycle.</p>
+    <a href="#application" class="btn-circle">Apply to Bundle</a>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section id="application">
+  <div class="container">
+    <p class="small-caps text-center">How to Apply</p>
+    <h2>The Application Process</h2>
+    <p class="subtitle">This is not open enrollment. Every clinician goes through a brief application — because your cohort matters as much as the curriculum.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h4>Complete the Application</h4>
+        <p>10 minutes. Tell us about your background, caseload, and what brings you here.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h4>We Review & Respond</h4>
+        <p>Within 5 business days. We're looking for clinical fit, not just credentials.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h4>Receive Your Enrollment Link</h4>
+        <p>If accepted, you'll receive your link and payment options to secure your spot.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h4>Secure Your Spot</h4>
+        <p>Cohorts fill in order of accepted applications. Waitlist available between cohorts.</p>
+      </div>
+    </div>
+    <div class="cta-center">
+      <a href="[YOUR-APPLICATION-URL]" class="btn-primary">Start Your Application</a>
+      <p class="note" style="margin-top:16px; font-size:13px; color:var(--light);">Questions? Email <a href="mailto:[YOUR-EMAIL]" style="color:var(--clay-dark); text-decoration:none;">[your email]</a> — we respond within 2 business days.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <p class="small-caps text-center">Common Questions</p>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Do I need to already be working with kids and families? <span class="arrow">↓</span></div>
+        <div class="faq-a"><p>You should have some child or family cases currently, or be actively building that caseload. This is an applied program — you'll be bringing real cases to live consultation every week.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I'm pre-licensed. Can I apply? <span class="arrow">↓</span></div>
+        <div class="faq-a"><p>Yes. Pre-licensed clinicians working under supervision are welcome to apply. The CMC credential is awarded upon program completion regardless of licensure status.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the program recorded if I miss a session? <span class="arrow">↓</span></div>
+        <div class="faq-a"><p>Sessions are recorded for enrolled cohort members only. We strongly encourage live attendance — the consultation and community dynamics are where most of the transformation happens, and those don't translate to a recording.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will this help me attract private pay clients? <span class="arrow">↓</span></div>
+        <div class="faq-a"><p>Yes — this is explicitly addressed in Week 10. Specialty credentials shift how families perceive your value. CMC clinicians are positioned to charge more and attract families willing to pay out of pocket for a specialist. Many graduates raise their rates within weeks of completing the program.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is this different from a regular CEU training? <span class="arrow">↓</span></div>
+        <div class="faq-a"><p>CEUs give you information. This program changes how you practice. Small cohort, live consultation, case presentation, earned credential. There is genuinely no comparison.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When is the next cohort, and how many spots are left? <span class="arrow">↓</span></div>
+        <div class="faq-a"><p>Cohort [#] opens [DATE] and applications close [DATE]. Cohorts are capped at 20 clinicians and waitlists form quickly. We recommend applying early — your spot is not reserved until you've been accepted and enrolled.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I'm accepted but not ready for this cohort? <span class="arrow">↓</span></div>
+        <div class="faq-a"><p>Your application stays active and we'll notify you when the next cohort opens. You'll have priority consideration for the following cohort without reapplying.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="container">
+    <p class="small-caps text-center">Ready?</p>
+    <h2>The clinicians your clients need most are the ones who never stop growing.</h2>
+    <p>You didn't get into this field to be average. You got into it to be genuinely, remarkably effective — with the families that no one else knows how to reach.</p>
+    <a href="[YOUR-APPLICATION-URL]" class="btn-primary">Apply for the Clarity Method™ Certification</a>
+    <p class="deadline">Cohort [#] &nbsp;·&nbsp; Applications close [DATE] &nbsp;·&nbsp; 20 spots available</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Clarity CBT</div>
+  <p>
+    © 2026 Clarity CBT · Dr. Erica Rozmid, PhD, ABPP<br />
+    The Clarity Method™ and Clarity Method Clinician™ (CMC) are proprietary credentials of Clarity CBT. All rights reserved.<br /><br />
+    <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="mailto:[YOUR-EMAIL]">Contact</a>
+  </p>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
